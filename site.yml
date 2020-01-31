@@ -1,0 +1,6 @@
+- name: Install wordpress
+  hosts: all
+  tasks:
+    import_role:
+      - SQL
+      - wordpress

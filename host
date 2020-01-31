@@ -1,0 +1,4 @@
+[wordpress]
+<aws_ip_address_here>
+[database]
+<aws_ip_address_here>

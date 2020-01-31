@@ -1,0 +1,22 @@
+- name: update apt
+    shell: sudo apt-get update
+
+- name: install SQL
+    apt:
+      name: mysql-server
+      update_cache: yes
+
+- name: enable mysql as a service
+  systemd:
+    name: mysql
+    enabled: yes
+
+- name: start mysql as a service
+  systemd:
+    name: mysql
+    enabled: yes
+
+- name: Create a new database for wordpress
+  mysql_db:
+    name: wordpress-db
+    state: present
